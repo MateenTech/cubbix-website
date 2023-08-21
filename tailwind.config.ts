@@ -14,7 +14,29 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
+    inset: {
+      '80%': '80%',
+    },
+    keyframes: {
+      bounce: {
+        "0%": {
+          transform: "translateY(-10%)",
+          animation_timing_func: "cubic-bezier(0.8, 0, 1, 1)",
+        },
+        "100%": {
+          transform: "translateY(-10%)",
+          animation_timing_func: "cubic-bezier(0.8, 0, 1, 1)",
+        },
+        "50%": {
+          transform: "translateY(0)",
+          animation_timing_func: "cubic-bezier(0, 0, 0.2, 1)",
+        }
+      },
+    },
+    animation: {
+      "illus-bounce": 'bounce 1s ease-in-out infinite',
+    },
+    plugins: [],
   },
-  plugins: [],
 }
 export default config
