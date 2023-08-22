@@ -16,14 +16,14 @@ export const Navbar = () => {
   }
 
   return (
-    <header className='w-full sticky top-[0]  bg-slate-50 z-100'>
+    <header className='w-full sticky top-[0]  bg-slate-50 z-100 shadow'>
       <nav
         className=' xl:max-w-7xl mx-auto px-4 py-3 flex items-center justify-between'
       >
         <h1
           className="cursor-pointer text-2xl font-extrabold"
         >
-          CUBBIX
+          <Link href={'#home'}>CU<span className=' text-sky-400'>BBIX</span></Link>          
         </h1>
         <ul
           className={`flex items-center [&>*:not(:last-child)]:mr-2  hover:[&>*]:cursor-pointer [&>*]:px-4 [&>*]:py-2 [&>*]:rounded-md hover:[&>*]:text-slate-200
@@ -37,8 +37,8 @@ export const Navbar = () => {
           max-sm:fixed
            z-100
           max-sm:right-[5%]
-          max-sm:top-[9%]
-
+          max-sm:top-[10%]
+          max-sm:shadow
           max-sm:h-56
           max-sm:w-52
           
