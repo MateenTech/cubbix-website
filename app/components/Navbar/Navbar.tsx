@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react'
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
+import styles from './Navbar.module.css';
+import Link from 'next/link';
 
 export const Navbar = () => {
   const [menuToggle, setMenuToggle] = useState(false);
@@ -14,9 +16,9 @@ export const Navbar = () => {
   }
 
   return (
-    <header className=' w-full sticky'>
+    <header className='w-full sticky top-[0]  bg-slate-50 z-100'>
       <nav
-        className='w-11/12 mx-auto px-4 py-3 flex items-center justify-between'
+        className=' xl:max-w-7xl mx-auto px-4 py-3 flex items-center justify-between'
       >
         <h1
           className="cursor-pointer text-2xl font-extrabold"
@@ -32,26 +34,34 @@ export const Navbar = () => {
           max-sm:py-3
           max-sm:bg-white
           max-sm:rounded-md
-          max-sm:absolute
-          max-sm:right-[4%]
-          max-sm:top-[110%]
+          max-sm:fixed
+           z-100
+          max-sm:right-[5%]
+          max-sm:top-[9%]
+
           max-sm:h-56
           max-sm:w-52
+          
           ${toggleClass}
           `}
         >
-          <li>Home</li>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Contact</li>
+          {
+            links.map((link) => {
+              return (
+                <li key={link} onClick={() => setMenuToggle(false)}>
+                  <Link href={`#${link}`}>{link.toLocaleUpperCase()}</Link>
+                </li>
+              )
+            })
+          }
         </ul>
 
         <button onClick={hamBurger} className='bg-transparent hidden max-sm:block'>
-          { 
-            !menuToggle 
+          {
+            !menuToggle
               ?
               <HiMenuAlt3 className=" h-6 w-6 cursor-pointer hidden max-sm:block" />
-              : 
+              :
               <HiX className=" h-6 w-6 cursor-pointer hidden max-sm:block" />
           }
         </button>
@@ -66,3 +76,6 @@ export const Navbar = () => {
     </header>
   )
 };
+
+
+const links: string[] = ["home", "about", "projects", "contact us"];

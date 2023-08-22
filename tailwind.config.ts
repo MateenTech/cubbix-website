@@ -13,6 +13,12 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      dropShadow: {
+        '3xl': ''
+      },
+      zIndex: {
+        '100': '100',
+      }
     },
     inset: {
       '80%': '80%',
@@ -20,11 +26,11 @@ const config: Config = {
     keyframes: {
       bounce: {
         "0%": {
-          transform: "translateY(-10%)",
+          transform: "translateY(-5%)",
           animation_timing_func: "cubic-bezier(0.8, 0, 1, 1)",
         },
         "100%": {
-          transform: "translateY(-10%)",
+          transform: "translateY(-5%)",
           animation_timing_func: "cubic-bezier(0.8, 0, 1, 1)",
         },
         "50%": {
