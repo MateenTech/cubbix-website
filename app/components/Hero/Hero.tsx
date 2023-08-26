@@ -2,9 +2,10 @@
 import { Button } from '../Button/Button';
 import device from '../../../public/assets/responsive-devices-removebg-preview.png';
 import { CustomImage } from '../Image/CustomImage';
-import { motion } from 'framer-motion';
+import { merge, tada, flip } from 'react-animations';
 
 export const Hero = () => {
+    const tadaFlip = merge(tada, flip);
     return (
         <div
             className=' bg-slate-900 text-slate-200 
@@ -20,9 +21,10 @@ export const Hero = () => {
             
             '>
                 {/* Hero Image Illustration */}
-                <CustomImage src={device} alt='responsive-devices' classes=' animate-illus-bounce
+                <CustomImage src={device} alt='responsive-devices' classes={`
+                  animate-illus-bounce
                 col-start-2
-                ' />
+                `} />
 
                 {/* Hero Info */}
          

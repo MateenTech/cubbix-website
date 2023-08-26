@@ -18,7 +18,7 @@ export const About = () => {
             infos.map<JSX.Element>(({ title, total, descp }) => {
               return (
                 <div className=' bg-slate-100 border-2 rounded-md p-6 border-slate-700 hover:bg-slate-800 hover:cursor-pointer
-                 shadow-xl group'
+                 shadow-xl group animate__animated animate__bounceInLeft'
                   key={title}
                 >
                   <h3 className=" font-semibold mb-0.5 text-slate-800 group-hover:text-sky-400 text-lg">{title}</h3>
