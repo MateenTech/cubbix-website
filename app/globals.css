@@ -12,3 +12,18 @@ html,
 body {
   scroll-behavior: smooth;
 }
+
+.services_list {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto, minmax(360px, 1fr));
+  grid-template-rows: auto;
+}
+
+
+/* @media screen and (min-width: 920px) {
+  .services_list {
+    display: grid;
+    grid-template-columns: ;
+  }
+} */

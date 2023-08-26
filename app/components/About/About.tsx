@@ -4,7 +4,7 @@ import { info } from "console";
 
 export const About = () => {
   return (
-    <section id='about' className=' bg-slate-100'>
+    <section id='about' className=' bg-slate-200'>
       <div className='w-full xl:max-w-7xl mx-auto px-4 py-20'>
 
         <p className='uppercase font-bold text-2xl text-slate-800 max-sm:text-center'>
@@ -17,7 +17,7 @@ export const About = () => {
           {
             infos.map<JSX.Element>(({ title, total, descp }) => {
               return (
-                <div className=' border-2 rounded-md p-6 border-slate-700 hover:bg-slate-800 hover:cursor-pointer
+                <div className=' bg-slate-100 border-2 rounded-md p-6 border-slate-700 hover:bg-slate-800 hover:cursor-pointer
                  shadow-xl group'
                   key={title}
                 >
