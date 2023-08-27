@@ -3,13 +3,12 @@
 import React, { useState } from 'react'
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import Link from 'next/link';
-import { fadeInDown, bounce } from 'react-animations';
 import 'animate.css';
 
 export const Navbar: React.FC = () => {
   const [menuToggle, setMenuToggle] = useState<boolean>(false);
 
-  const toggleClass = (menuToggle) ? `max-md:inline-flex animate__backInDown` : "max-md:hidden animate__backOutDown";
+  const toggleClass = (menuToggle) ? `max-md:inline-flex animate__backInDown` : "max-md:hidden ";
 
   const hamBurger = () => {
     setMenuToggle(!menuToggle);
@@ -50,8 +49,8 @@ export const Navbar: React.FC = () => {
             links.map((link) => {
               return (
                 <li key={link} onClick={() => setMenuToggle(false)}>
-                  <Link 
-                    href={`#${link}`} 
+                  <Link
+                    href={`#${link}`}
                     className='px-4 py-2  rounded-md hover:text-slate-200
                     hover:bg-gradient-to-br from-slate-900 to-gray-900 '
                   >
