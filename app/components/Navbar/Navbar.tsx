@@ -21,7 +21,7 @@ export const Navbar: React.FC = () => {
         className=' xl:max-w-7xl mx-auto px-4 py-3 flex items-center justify-between'
       >
         <h1
-          className={`cursor-pointer text-2xl font-extrabold animate__animated animate__tada animate__delay-2s`}
+          className={`cursor-pointer text-2xl font-extrabold animate__animated animate__tada`}
         >
           <Link href={'#home'}>CU<span className=' text-sky-400'>BBIX</span></Link>
         </h1>
@@ -80,4 +80,4 @@ export const Navbar: React.FC = () => {
 };
 
 
-const links: string[] = ["home", "about", "services", "portfolio", "contact us"];
+const links: string[] = ["home", "about", "services", "portfolio", "contact"];

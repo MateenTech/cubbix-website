@@ -9,7 +9,7 @@ type ButtonClassProp = {
 export const Button = ({customClass}: ButtonClassProp) => {
   return (
     <button className={`text-2xl bg-sky-500 text-white border-none p-3 rounded-xl ${customClass}
-    ${styles.shadow}`} >
+    shadow-md shadow-sky-800 active:shadow-none`} >
       <HiArrowUpRight className="stroke-1"/>
     </button>
   )
