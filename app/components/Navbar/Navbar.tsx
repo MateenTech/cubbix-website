@@ -16,7 +16,7 @@ export const Navbar: React.FC = () => {
   }
 
   return (
-    <header className='w-full sticky top-[0]  bg-slate-50 z-100 shadow'>
+    <header className='w-full fixed top-[0]  bg-slate-50 z-100 shadow'>
       <nav
         className=' xl:max-w-7xl mx-auto px-4 py-3 flex items-center justify-between'
       >
