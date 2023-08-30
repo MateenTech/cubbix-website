@@ -3,6 +3,7 @@ import React, { FormEvent, FormEventHandler, useState } from 'react'
 import { Map } from '../Map/Map';
 import { Slide } from 'react-awesome-reveal';
 
+
 type ContactUI = {
     category: string;
     fullName: string;
